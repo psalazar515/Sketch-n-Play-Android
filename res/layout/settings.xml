@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/settings_bg">
+
+    <Spinner
+        android:id="@+id/background_colour"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/spinner"
+        android:drawSelectorOnTop="true"
+        android:layout_marginTop="150dp"
+        android:entries="@array/bg_colours"
+        android:prompt="@string/background_colour" />
+
+    <EditText
+        android:id="@+id/fps_text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/background_colour"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:ems="10" 
+        android:gravity="center"
+        android:background="@drawable/spinner"
+        android:hint="@string/fps"
+        android:inputType="number"
+        android:text="30">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/submitbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fps_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_button"
+        android:onClick="submit"
+        android:text="@string/submit" />
+
+</RelativeLayout>
